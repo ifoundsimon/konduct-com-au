@@ -6,7 +6,7 @@
   <title>konduct.com.au</title>
   <meta name="robots" content="noindex, nofollow">
   <style>
-    :root { --bg: #000; --fg: #00ff6a; }
+    :root { --bg: #000; --fg: #00ff6a; --hi: #fff; }
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--fg); }
     body {
@@ -16,10 +16,14 @@
     }
     main { max-width: 42rem; padding: 2rem; }
     p { margin: 0 0 0.85em; }
-    a { color: var(--fg); }
+    .continue { color: var(--hi); }
+    .continue a { color: var(--hi); text-decoration: underline; text-underline-offset: 0.2em; }
+    .continue a:hover { opacity: 0.85; }
     .cursor {
-      display: inline-block; width: 0.6em; border-bottom: 2px solid var(--fg);
+      display: inline-block; width: 0.6em; margin-left: 0.15em;
+      border-bottom: 2px solid var(--hi);
       animation: blink 1s step-end infinite;
+      vertical-align: baseline;
     }
     @keyframes blink { 50% { border-color: transparent; } }
   </style>
@@ -29,10 +33,7 @@
     <p>&gt; konduct.com.au</p>
     <p>&gt; this address is no longer in use.</p>
     <p>&gt; the site that lived here has been retired.</p>
-    <p>&gt; konduct continues at <a href="https://konduct.au">konduct.au</a></p>
-    <p>&gt; mail to this domain still reaches the house.</p>
-    <p>&gt; contact <a href="mailto:info@konduct.au">info@konduct.au</a> for anything urgent.</p>
-    <p>&gt; <span class="cursor"></span></p>
+    <p class="continue">&gt; konduct continues at <a href="https://konduct.au">konduct.au</a><span class="cursor"></span></p>
   </main>
 </body>
 </html>
